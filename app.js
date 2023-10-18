@@ -15,7 +15,9 @@ const usermodel=require('./models/user');
 
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors({origin:'http://localhost:3000',credentials:true}));
+
+// app.use(cors({origin:'http://localhost:3000',credentials:true}));
+app.use(cors({origin:'https://file-access.vercel.app',credentials:true}));
 
 app.post("/register",async(req,res)=>{
 
